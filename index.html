@@ -9,9 +9,23 @@
 <body>
     <h1>Language Learning App</h1>
 
-    <div id="course-selection">
+    <!-- Fake Login for Teacher -->
+    <div id="login-section">
+        <button onclick="teacherLogin()">Teacher Login</button>
+    </div>
+
+    <!-- Course Selection (Visible After Login) -->
+    <div id="course-selection" style="display:none;">
         <button onclick="loadCourse('japanese')">Japanese</button>
         <button onclick="loadCourse('korean')">Korean</button>
+    </div>
+
+    <!-- Teacher Dashboard (Visible After Login) -->
+    <div id="teacher-dashboard" style="display:none;">
+        <h2>Teacher Dashboard</h2>
+        <button onclick="loadCourse('japanese')">Manage Japanese Course</button>
+        <button onclick="loadCourse('korean')">Manage Korean Course</button>
+        <button onclick="logout()">Logout</button>
     </div>
 
     <div id="course-content"></div>
